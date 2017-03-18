@@ -53,6 +53,7 @@ class ComponentbuilderViewNew_view extends JViewLegacy
 		$this->script 		= $this->get('Script');
 		$this->state		= $this->get('State');
                 // get action permissions
+                 								//is here writing 'new_view' necessary?
 		$this->canDo		= ComponentbuilderHelper::getActions('new_view',$this->item);
 		// get input
 		$jinput = JFactory::getApplication()->input;
@@ -199,7 +200,7 @@ class ComponentbuilderViewNew_view extends JViewLegacy
 		$isNew = ($this->item->id < 1);
 		// the code below gets the document object. 
 		$document = JFactory::getDocument();
-		// the code below sets the title of page dunamicaly. 
+		// the code below sets the title of page dinamicaly. 
 		$document->setTitle(JText::_($isNew ? 'COM_COMPONENTBUILDER_ADMIN_VIEW_NEW' : 'COM_COMPONENTBUILDER_ADMIN_VIEW_EDIT'));
 		$document->addStyleSheet(JURI::root() . "administrator/components/com_componentbuilder/assets/css/new_view.css");
 		// Add Ajax Token

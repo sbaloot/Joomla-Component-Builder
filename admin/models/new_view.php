@@ -644,7 +644,8 @@ class ComponentbuilderModelNew_view extends JModelAdmin
 	 * @return string	script files
 	 */
 	public function getScript()
-	{
+	{								// this directive adds the js file for submit button.
+									// and must be changed to new_view.js . 
 		return 'administrator/components/com_componentbuilder/models/forms/admin_view.js';
 	}
     
