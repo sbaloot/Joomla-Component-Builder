@@ -10,8 +10,8 @@
                                                         |_| 				
 /-------------------------------------------------------------------------------------------------------------------------------/
 
-	@version		2.3.7
-	@build			12th March, 2017
+	@version		2.3.5
+	@build			24th February, 2017
 	@created		30th April, 2015
 	@package		Component Builder
 	@subpackage		custom_buttons_fullwidth.php
@@ -30,6 +30,9 @@ defined('_JEXEC') or die('Restricted access');
 $form = $displayData->getForm();
 
 $fields = $displayData->get('fields') ?: array(
+	'button_position',
+	'add_custom_button',
+	'custom_button',
 	'php_controller',
 	'php_model'
 );

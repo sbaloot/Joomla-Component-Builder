@@ -10,8 +10,8 @@
                                                         |_| 				
 /-------------------------------------------------------------------------------------------------------------------------------/
 
-	@version		2.3.7
-	@build			12th March, 2017
+	@version		2.3.5
+	@build			24th February, 2017
 	@created		30th April, 2015
 	@package		Component Builder
 	@subpackage		settings_right.php
@@ -34,7 +34,7 @@ $fields = $displayData->get('fields') ?: array(
 	'addcontributors',
 	'emptycontributors',
 	'number',
-	'spacer_hr_c',
+	'spacer_hr_a',
 	'note_add_files',
 	'addfiles',
 	'spacer_hr_b',

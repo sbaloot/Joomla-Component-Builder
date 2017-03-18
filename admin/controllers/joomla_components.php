@@ -10,8 +10,8 @@
                                                         |_| 				
 /-------------------------------------------------------------------------------------------------------------------------------/
 
-	@version		@update number 97 of this MVC
-	@build			3rd March, 2017
+	@version		@update number 96 of this MVC
+	@build			17th February, 2017
 	@created		6th May, 2015
 	@package		Component Builder
 	@subpackage		joomla_components.php
@@ -107,5 +107,5 @@ class ComponentbuilderControllerJoomla_components extends JControllerAdmin
 		$message = JText::_('COM_COMPONENTBUILDER_IMPORT_FAILED');
 		$this->setRedirect(JRoute::_('index.php?option=com_componentbuilder&view=joomla_components', false), $message, 'error');
 		return;
-	}  
+	} 
 }

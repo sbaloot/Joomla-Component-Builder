@@ -10,8 +10,8 @@
                                                         |_| 				
 /-------------------------------------------------------------------------------------------------------------------------------/
 
-	@version		2.3.7
-	@build			12th March, 2017
+	@version		2.3.5
+	@build			24th February, 2017
 	@created		30th April, 2015
 	@package		Component Builder
 	@subpackage		componentbuilder.php
@@ -43,7 +43,7 @@ class ComponentbuilderModelComponentbuilder extends JModelList
 		$icons  = array();
                 // view groups array
 		$viewGroups = array(
-			'main' => array('png.compiler', 'png.joomla_component.add', 'png.joomla_components', 'png.admin_view.add', 'png.admin_views', 'png.custom_admin_view.add', 'png.custom_admin_views', 'png.site_view.add', 'png.site_views', 'png.template.add', 'png.templates', 'png.layout.add', 'png.layouts', 'png.dynamic_get.add', 'png.dynamic_gets', 'png.custom_codes', 'png.snippet.add', 'png.snippets', 'png.field.add', 'png.fields', 'png.fields.catid', 'png.fieldtype.add', 'png.fieldtypes', 'png.fieldtypes.catid', 'png.help_document.add', 'png.help_documents')
+			'main' => array('png.compiler', 'png.joomla_component.add', 'png.joomla_components', 'png.admin_view.add', 'png.admin_views', 'png.custom_admin_view.add', 'png.custom_admin_views', 'png.site_view.add', 'png.site_views', 'png.template.add', 'png.templates', 'png.layout.add', 'png.layouts', 'png.dynamic_get.add', 'png.dynamic_gets', 'png.custom_codes', 'png.snippet.add', 'png.snippets', 'png.field.add', 'png.fields', 'png.fields.catid', 'png.fieldtype.add', 'png.fieldtypes', 'png.fieldtypes.catid', 'png.help_document.add', 'png.help_documents','png.new_view.add')
 		);
 		// view access array
 		$viewAccess = array(
@@ -56,9 +56,11 @@ class ComponentbuilderModelComponentbuilder extends JModelList
 			'joomla_component.dashboard_add' => 'joomla_component.dashboard_add',
 			'admin_views.access' => 'admin_view.access',
 			'admin_view.access' => 'admin_view.access',
+			'new_view.access' => 'new_view.access',
 			'admin_views.submenu' => 'admin_view.submenu',
 			'admin_views.dashboard_list' => 'admin_view.dashboard_list',
 			'admin_view.dashboard_add' => 'admin_view.dashboard_add',
+			'new_view.dashboard_add' => 'new_view.dashboard_add',
 			'custom_admin_views.access' => 'custom_admin_view.access',
 			'custom_admin_view.access' => 'custom_admin_view.access',
 			'custom_admin_views.submenu' => 'custom_admin_view.submenu',

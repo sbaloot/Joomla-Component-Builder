@@ -529,14 +529,6 @@ class Get
 
 		// Load the results as a list of stdClass objects
 		$component = $this->db->loadObject();
-		
-		// set component place holders
-		$this->placeholders['###component###'] = ComponentbuilderHelper::safeString($component->name_code);
-		$this->placeholders['###Component###'] = ComponentbuilderHelper::safeString($component->name_code, 'F');
-		$this->placeholders['###COMPONENT###'] = ComponentbuilderHelper::safeString($component->name_code, 'U');
-		$this->placeholders['[[[component]]]'] = $this->placeholders['###component###'];
-		$this->placeholders['[[[Component]]]'] = $this->placeholders['###Component###'];
-		$this->placeholders['[[[COMPONENT]]]'] = $this->placeholders['###COMPONENT###'];
 		// set component sales name
 		$component->sales_name = ComponentbuilderHelper::safeString($component->system_name);
 		// ensure version naming is correct
@@ -677,7 +669,7 @@ class Get
 		}
 
 		// set the site_view data
-		$site_views = json_decode($component->addsite_views,true);
+		$site_views	= json_decode($component->addsite_views,true);
 		if (ComponentbuilderHelper::checkArray($site_views))
 		{
 			foreach ($site_views as $option => $values)
@@ -698,14 +690,11 @@ class Get
 			$this->lang = 'site';
 			$this->target = 'site';
 			// load the view and field data
-			if (isset($component->site_views) && ComponentbuilderHelper::checkArray($component->site_views))
+			foreach ($component->site_views as $key => &$view)
 			{
-				foreach ($component->site_views as $key => &$view)
-				{
-					// has become a lacacy issue, can't remove this
-					$view['view'] = $view['siteview'];
-					$view['settings'] = $this->getCustomViewData($view['view']);
-				}
+				// has become a lacacy issue, can't remove this
+				$view['view'] = $view['siteview'];
+				$view['settings'] = $this->getCustomViewData($view['view']);
 			}
 		}
 
@@ -731,14 +720,11 @@ class Get
 			$this->lang = 'admin';
 			$this->target = 'custom_admin';
 			// load the view and field data
-			if (isset($component->custom_admin_views) && ComponentbuilderHelper::checkArray($component->custom_admin_views))
+			foreach ($component->custom_admin_views as $key => &$view)
 			{
-				foreach ($component->custom_admin_views as $key => &$view)
-				{
-					// has become a lacacy issue, can't remove this
-					$view['view'] = $view['customadminview'];
-					$view['settings'] = $this->getCustomViewData($view['view'], 'custom_admin_view');
-				}
+				// has become a lacacy issue, can't remove this
+				$view['view'] = $view['customadminview'];
+				$view['settings'] = $this->getCustomViewData($view['view'], 'custom_admin_view');
 			}
 		}
 
@@ -1280,23 +1266,13 @@ class Get
                         // add the custom buttons
                         if (isset($view->add_custom_button) && $view->add_custom_button == 1)
                         {
-				// set for the edit views
-                                if (ComponentbuilderHelper::checkString($view->php_model))
+                                if (ComponentbuilderHelper::checkString($view->php_model) && $view->php_mode !== '//')
                                 {
                                         $view->php_model = $this->setDynamicValues(base64_decode($view->php_model));
                                 }
-				if (ComponentbuilderHelper::checkString($view->php_controller))
+				if (ComponentbuilderHelper::checkString($view->php_controller) && trim($view->php_controller) !== '//')
                                 {
 					$view->php_controller = $this->setDynamicValues(base64_decode($view->php_controller));
-				}
-				// set for the list views
-                                if (isset($view->php_model_list) && ComponentbuilderHelper::checkString($view->php_model_list))
-                                {
-                                        $view->php_model_list = $this->setDynamicValues(base64_decode($view->php_model_list));
-                                }
-				if (isset($view->php_controller_list) && ComponentbuilderHelper::checkString($view->php_controller_list))
-                                {
-					$view->php_controller_list = $this->setDynamicValues(base64_decode($view->php_controller_list));
 				}
                                 // set the button array
                                 $buttons = json_decode($view->custom_button,true);
@@ -2318,11 +2294,7 @@ class Get
 					$langHolders["JText::sprintf('".$string."',"] = "JText::sprintf('".$keyLang."',";
 					$langHolders['JText::sprintf("'.$string.'",'] = 'JText::sprintf("'.$keyLang.'",';
 				}
-				// only continue if we have value to replace
-				if (isset($langHolders) && ComponentbuilderHelper::checkArray($langHolders))
-				{
-					$content = $this->setPlaceholders($content, $langHolders);
-				}
+				$content = $this->setPlaceholders($content, $langHolders);
 			}
 		}
 		return $content;
@@ -2737,11 +2709,7 @@ class Get
 	 */
 	public function setDynamicValues($string)
 	{
-		if (ComponentbuilderHelper::checkString($string))
-		{
-			return $this->setLangStrings($this->setCustomCodeData($string));
-		}
-		return $string;
+		return $this->setLangStrings($this->setCustomCodeData($string));
 	}
 	
 	/**

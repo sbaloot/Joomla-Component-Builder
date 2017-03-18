@@ -95,34 +95,34 @@ CREATE TABLE IF NOT EXISTS `#__componentbuilder_joomla_component` (
 	KEY `idx_modifiedby` (`modified_by`),
 	KEY `idx_state` (`published`),
 	KEY `idx_name_code` (`name_code`),
-	KEY `idx_add_php_dashboard_methods` (`add_php_dashboard_methods`),
-	KEY `idx_add_sales_server` (`add_sales_server`),
-	KEY `idx_name` (`name`),
-	KEY `idx_adduikit` (`adduikit`),
 	KEY `idx_add_php_helper_site` (`add_php_helper_site`),
-	KEY `idx_add_email_helper` (`add_email_helper`),
-	KEY `idx_debug_linenr` (`debug_linenr`),
-	KEY `idx_add_placeholders` (`add_placeholders`),
-	KEY `idx_add_admin_event` (`add_admin_event`),
-	KEY `idx_mvc_versiondate` (`mvc_versiondate`),
-	KEY `idx_add_site_event` (`add_site_event`),
-	KEY `idx_update_server_target` (`update_server_target`),
-	KEY `idx_add_update_server` (`add_update_server`),
 	KEY `idx_creatuserhelper` (`creatuserhelper`),
-	KEY `idx_emptycontributors` (`emptycontributors`),
-	KEY `idx_add_license` (`add_license`),
-	KEY `idx_license_type` (`license_type`),
-	KEY `idx_add_css` (`add_css`),
+	KEY `idx_add_php_helper_admin` (`add_php_helper_admin`),
+	KEY `idx_debug_linenr` (`debug_linenr`),
+	KEY `idx_add_sql` (`add_sql`),
+	KEY `idx_add_placeholders` (`add_placeholders`),
+	KEY `idx_mvc_versiondate` (`mvc_versiondate`),
+	KEY `idx_update_server_target` (`update_server_target`),
 	KEY `idx_addfootable` (`addfootable`),
 	KEY `idx_add_php_helper_both` (`add_php_helper_both`),
-	KEY `idx_add_php_helper_admin` (`add_php_helper_admin`),
+	KEY `idx_add_admin_event` (`add_admin_event`),
+	KEY `idx_add_update_server` (`add_update_server`),
+	KEY `idx_add_site_event` (`add_site_event`),
+	KEY `idx_add_php_dashboard_methods` (`add_php_dashboard_methods`),
+	KEY `idx_name` (`name`),
+	KEY `idx_add_license` (`add_license`),
+	KEY `idx_license_type` (`license_type`),
+	KEY `idx_adduikit` (`adduikit`),
+	KEY `idx_add_css` (`add_css`),
+	KEY `idx_add_email_helper` (`add_email_helper`),
+	KEY `idx_add_php_preflight_install` (`add_php_preflight_install`),
+	KEY `idx_add_php_preflight_update` (`add_php_preflight_update`),
 	KEY `idx_add_php_postflight_install` (`add_php_postflight_install`),
 	KEY `idx_add_php_postflight_update` (`add_php_postflight_update`),
 	KEY `idx_add_php_method_uninstall` (`add_php_method_uninstall`),
-	KEY `idx_add_php_preflight_install` (`add_php_preflight_install`),
-	KEY `idx_add_php_preflight_update` (`add_php_preflight_update`),
-	KEY `idx_add_sql` (`add_sql`),
-	KEY `idx_addreadme` (`addreadme`)
+	KEY `idx_addreadme` (`addreadme`),
+	KEY `idx_add_sales_server` (`add_sales_server`),
+	KEY `idx_emptycontributors` (`emptycontributors`)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `#__componentbuilder_admin_view` (
@@ -184,7 +184,6 @@ CREATE TABLE IF NOT EXISTS `#__componentbuilder_admin_view` (
 	`php_before_delete` MEDIUMTEXT NOT NULL,
 	`php_before_publish` MEDIUMTEXT NOT NULL,
 	`php_controller` MEDIUMTEXT NOT NULL,
-	`php_controller_list` MEDIUMTEXT NOT NULL,
 	`php_document` MEDIUMTEXT NOT NULL,
 	`php_getitem` MEDIUMTEXT NOT NULL,
 	`php_getitems` MEDIUMTEXT NOT NULL,
@@ -195,7 +194,6 @@ CREATE TABLE IF NOT EXISTS `#__componentbuilder_admin_view` (
 	`php_import_save` MEDIUMTEXT NOT NULL,
 	`php_import_setdata` MEDIUMTEXT NOT NULL,
 	`php_model` MEDIUMTEXT NOT NULL,
-	`php_model_list` MEDIUMTEXT NOT NULL,
 	`php_postsavehook` MEDIUMTEXT NOT NULL,
 	`php_save` MEDIUMTEXT NOT NULL,
 	`short_description` VARCHAR(255) NOT NULL DEFAULT '',
@@ -223,33 +221,33 @@ CREATE TABLE IF NOT EXISTS `#__componentbuilder_admin_view` (
 	KEY `idx_state` (`published`),
 	KEY `idx_name_single` (`name_single`),
 	KEY `idx_name_list` (`name_list`),
-	KEY `idx_add_php_getitems_after_all` (`add_php_getitems_after_all`),
-	KEY `idx_add_php_after_publish` (`add_php_after_publish`),
-	KEY `idx_add_fadein` (`add_fadein`),
+	KEY `idx_add_php_getitems` (`add_php_getitems`),
+	KEY `idx_type` (`type`),
+	KEY `idx_add_php_document` (`add_php_document`),
 	KEY `idx_add_php_allowedit` (`add_php_allowedit`),
 	KEY `idx_add_sql` (`add_sql`),
-	KEY `idx_add_php_save` (`add_php_save`),
-	KEY `idx_add_php_batchmove` (`add_php_batchmove`),
-	KEY `idx_add_php_after_delete` (`add_php_after_delete`),
-	KEY `idx_add_php_getitems` (`add_php_getitems`),
-	KEY `idx_add_php_getlistquery` (`add_php_getlistquery`),
 	KEY `idx_add_php_postsavehook` (`add_php_postsavehook`),
 	KEY `idx_add_php_batchcopy` (`add_php_batchcopy`),
-	KEY `idx_add_php_before_publish` (`add_php_before_publish`),
-	KEY `idx_add_php_before_delete` (`add_php_before_delete`),
-	KEY `idx_add_php_document` (`add_php_document`),
-	KEY `idx_type` (`type`),
+	KEY `idx_add_fadein` (`add_fadein`),
 	KEY `idx_add_php_getitem` (`add_php_getitem`),
+	KEY `idx_add_php_getitems_after_all` (`add_php_getitems_after_all`),
 	KEY `idx_add_custom_import` (`add_custom_import`),
 	KEY `idx_add_css_view` (`add_css_view`),
 	KEY `idx_add_css_views` (`add_css_views`),
 	KEY `idx_add_javascript_view_file` (`add_javascript_view_file`),
+	KEY `idx_add_php_batchmove` (`add_php_batchmove`),
+	KEY `idx_add_php_before_publish` (`add_php_before_publish`),
 	KEY `idx_add_javascript_view_footer` (`add_javascript_view_footer`),
+	KEY `idx_add_php_after_publish` (`add_php_after_publish`),
+	KEY `idx_add_php_before_delete` (`add_php_before_delete`),
 	KEY `idx_add_javascript_views_file` (`add_javascript_views_file`),
+	KEY `idx_add_php_after_delete` (`add_php_after_delete`),
 	KEY `idx_add_javascript_views_footer` (`add_javascript_views_footer`),
 	KEY `idx_add_custom_button` (`add_custom_button`),
 	KEY `idx_source` (`source`),
-	KEY `idx_add_php_ajax` (`add_php_ajax`)
+	KEY `idx_add_php_ajax` (`add_php_ajax`),
+	KEY `idx_add_php_getlistquery` (`add_php_getlistquery`),
+	KEY `idx_add_php_save` (`add_php_save`)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `#__componentbuilder_custom_admin_view` (
@@ -371,18 +369,18 @@ CREATE TABLE IF NOT EXISTS `#__componentbuilder_site_view` (
 	KEY `idx_state` (`published`),
 	KEY `idx_name` (`name`),
 	KEY `idx_codename` (`codename`),
+	KEY `idx_add_php_ajax` (`add_php_ajax`),
+	KEY `idx_main_get` (`main_get`),
+	KEY `idx_dynamic_get` (`dynamic_get`),
 	KEY `idx_add_php_document` (`add_php_document`),
-	KEY `idx_add_php_jview_display` (`add_php_jview_display`),
 	KEY `idx_add_php_view` (`add_php_view`),
+	KEY `idx_add_php_jview_display` (`add_php_jview_display`),
+	KEY `idx_add_custom_button` (`add_custom_button`),
 	KEY `idx_add_php_jview` (`add_php_jview`),
 	KEY `idx_add_js_document` (`add_js_document`),
-	KEY `idx_main_get` (`main_get`),
-	KEY `idx_add_css_document` (`add_css_document`),
-	KEY `idx_dynamic_get` (`dynamic_get`),
-	KEY `idx_add_css` (`add_css`),
-	KEY `idx_add_php_ajax` (`add_php_ajax`),
 	KEY `idx_button_position` (`button_position`),
-	KEY `idx_add_custom_button` (`add_custom_button`)
+	KEY `idx_add_css_document` (`add_css_document`),
+	KEY `idx_add_css` (`add_css`)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `#__componentbuilder_template` (
@@ -557,8 +555,8 @@ CREATE TABLE IF NOT EXISTS `#__componentbuilder_custom_code` (
 	KEY `idx_target` (`target`),
 	KEY `idx_type` (`type`),
 	KEY `idx_function_name` (`function_name`),
-	KEY `idx_from_line` (`from_line`),
-	KEY `idx_to_line` (`to_line`)
+	KEY `idx_to_line` (`to_line`),
+	KEY `idx_from_line` (`from_line`)
 ) ENGINE=MyISAM AUTO_INCREMENT=0 DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `#__componentbuilder_snippet` (
@@ -758,8 +756,6 @@ INSERT INTO `#__componentbuilder_dynamic_get` (`id`, `add_php_after_getitem`, `a
 (36, '', '', 1, '', '', '', '', '', '', 'CQkvLyBkbyBhIHF1aWNrIGJ1aWxkIG9mIGFsbCBlZGl0IGxpbmtzIGxpbmtzDQoJCWlmIChpc3NldCgkaXRlbXMpICYmICRpdGVtcykNCgkJew0KCQkJZm9yZWFjaCAoJGl0ZW1zIGFzICRuciA9PiAmJGl0ZW0pDQoJCQl7DQoJCQkJJGNhbkRvID0gW1tbQ29tcG9uZW50XV1dSGVscGVyOjpnZXRBY3Rpb25zKCdsb29rJywkaXRlbSwnbG9va3MnKTsNCgkJCQlpZiAoJGNhbkRvLT5nZXQoJ2xvb2suZWRpdCcpKQ0KCQkJCXsNCgkJCQkJJGl0ZW0tPmVkaXRMaW5rID0gJzxiciAvPjxiciAvPjxhIGNsYXNzPSJ1ay1idXR0b24gdWstYnV0dG9uLXByaW1hcnkgdWstd2lkdGgtMS0xIiBocmVmPSInOw0KCQkJCQkkaXRlbS0+ZWRpdExpbmsgLj0gSlJvdXRlOjpfKCdpbmRleC5waHA/b3B0aW9uPWNvbV9bW1tjb21wb25lbnRdXV0mdmlldz1sb29rJnRhc2s9bG9vay5lZGl0JmlkPScgLiAkaXRlbS0+aWQpOw0KCQkJCQkkaXRlbS0+ZWRpdExpbmsgLj0gJyI+PGkgY2xhc3M9InVrLWljb24tcGVuY2lsIj48L2k+PHNwYW4gY2xhc3M9InVrLWhpZGRlbi1zbWFsbCI+JzsNCgkJCQkJJGl0ZW0tPmVkaXRMaW5rIC49IEpUZXh0OjpfKCdFZGl0IExvb2snKTsNCgkJCQkJJGl0ZW0tPmVkaXRMaW5rIC49ICc8L3NwYW4+PC9hPic7DQoJCQkJfQ0KCQkJCWVsc2UNCgkJCQl7DQoJCQkJCSRpdGVtLT5lZGl0TGluayA9ICcnOw0KCQkJCX0NCgkJCX0NCgkJfQ==', 1, '', '', '', '{\"filter_type\":[],\"state_key\":[],\"operator\":[],\"table_key\":[]}', '', 2, '{\"name\":[],\"key\":[],\"as\":[],\"type\":[]}', '', '{\"view_table\":[],\"row_type\":[],\"as\":[],\"type\":[],\"on_field\":[],\"operator\":[],\"join_field\":[],\"selection\":[]}', 1, 'Looks', '', '{\"table_key\":[\"a.name\"],\"direction\":[\"ASC\"]}', '', '', 'a.id AS id\r\na.name AS name\r\na.alias AS alias\r\na.description AS description\r\na.add AS add\r\na.email AS email\r\na.mobile_phone AS mobile_phone\r\na.dateofbirth AS dateofbirth\r\na.image AS image\r\na.website AS website\r\na.not_required AS not_required\r\na.published AS published\r\na.hits AS hits\r\na.ordering AS ordering', 109, '{\"table_key\":[\"a.published\"],\"operator\":[\"1\"],\"value_key\":[\"1\"]}', '', 1, 5, '', 13),
 (39, '', '', '', '', '', '', '', '', '', '', 1, '', '', '', '{\"filter_type\":[\"1\"],\"state_key\":[\"id\"],\"operator\":[\"1\"],\"table_key\":[\"a.id\"]}', '', 1, '', '', '', 1, 'Looking', '', '', '', '', 'a.id AS id\r\na.name AS name\r\na.alias AS alias\r\na.description AS description\r\na.add AS add\r\na.email AS email\r\na.mobile_phone AS mobile_phone\r\na.dateofbirth AS dateofbirth\r\na.image AS image\r\na.website AS website\r\na.published AS published\r\na.hits AS hits', 109, '{\"table_key\":[],\"operator\":[],\"value_key\":[]}', '', 1, 7, '', '');
 
-
-
 --
 -- Dumping data for table `#__componentbuilder_snippet`
 --
@@ -918,11 +914,6 @@ INSERT INTO `#__componentbuilder_help_document` (`id`, `admin_view`, `alias`, `a
 (11, 'help_documents', 'welcome-to-the-list-view-of-help-documents', '', '', '\"\"', 1, '', '', 2, 'Welcome to the List view of Help Documents', 3, 'http://projects.vdm.io/projects/joomla-component-builder/wiki/Help_Documents_List_View', '', 1, 2, '', 11);
 
 --
--- Always insure this column rules is large enough for all the access control values.
+-- Always insure this column is large enough for all the access control values.
 --
 ALTER TABLE `#__assets` CHANGE `rules` `rules` MEDIUMTEXT NOT NULL COMMENT 'JSON encoded access control.';
-
---
--- Always insure this column name is large enough for long component and view names.
---
-ALTER TABLE `#__assets` CHANGE `name` `name` VARCHAR(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'The unique name for the asset.';

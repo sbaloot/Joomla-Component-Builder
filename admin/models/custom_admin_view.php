@@ -11,7 +11,7 @@
 /-------------------------------------------------------------------------------------------------------------------------------/
 
 	@version		@update number 22 of this MVC
-	@build			1st March, 2017
+	@build			22nd February, 2017
 	@created		13th August, 2015
 	@package		Component Builder
 	@subpackage		custom_admin_view.php
@@ -179,7 +179,7 @@ class ComponentbuilderModelCustom_admin_view extends JModelAdmin
 	*
 	* @return mixed  An array of data items on success, false on failure.
 	*/
-	public function getVyglinked_components()
+	public function getVyelinked_components()
 	{
 		// Get the user object.
 		$user = JFactory::getUser();

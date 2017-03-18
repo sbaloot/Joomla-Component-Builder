@@ -157,13 +157,6 @@
             "rename": "Helper_site",
             "type": "file"
       },
-      "Helper_category.php": {
-            "naam":"Helper_category.php",
-            "path": "c0mp0n3nt/site/helpers",
-            "rename": "new",
-            "newName": "category.php",
-            "type": "file"
-      },
       "script.php": {
             "naam":"script.php",
             "path": "c0mp0n3nt/",
@@ -684,11 +677,6 @@
           "rename": "new",
           "newName": "submitbutton.js",
           "type": "custom_form"
-        },
-        "Helper_category_view.php": {
-          "path": "c0mp0n3nt/site/helpers",
-          "rename": "Helper_category_view",
-          "type": "category"
         }
       },
       "custom_admin": {

@@ -10,8 +10,8 @@
                                                         |_| 				
 /-------------------------------------------------------------------------------------------------------------------------------/
 
-	@version		2.3.7
-	@build			12th March, 2017
+	@version		2.3.5
+	@build			24th February, 2017
 	@created		30th April, 2015
 	@package		Component Builder
 	@subpackage		custom_buttons_fullwidth.php
@@ -31,9 +31,7 @@ $form = $displayData->getForm();
 
 $fields = $displayData->get('fields') ?: array(
 	'php_controller',
-	'php_controller_list',
-	'php_model',
-	'php_model_list'
+	'php_model'
 );
 
 ?>
