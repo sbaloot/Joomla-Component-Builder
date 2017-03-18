@@ -515,7 +515,10 @@ class ComponentbuilderModelNew_view extends JModelAdmin
 
 		// Load the items
 		$db->setQuery($query);
+		//executes the query.
 		$db->execute();
+		//Get the number of returned rows for the previous executed SQL statement.
+		//return: The number of returned rows.
 		if ($db->getNumRows())
 		{
 			$items = $db->loadObjectList();
@@ -563,6 +566,7 @@ class ComponentbuilderModelNew_view extends JModelAdmin
 	public function getForm($data = array(), $loadData = true)
 	{
 		// Get the form.
+		// where is defined the loadForm method?
 		$form = $this->loadForm('com_componentbuilder.admin_view', 'admin_view', array('control' => 'jform', 'load_data' => $loadData));
 
 		if (empty($form))
@@ -756,6 +760,7 @@ class ComponentbuilderModelNew_view extends JModelAdmin
 				$db = JFactory::getDbo();
 				$query = $db->getQuery(true)
 					->select('MAX(ordering)')
+												// must change table name below:
 					->from($db->quoteName('#__componentbuilder_admin_view'));
 				$db->setQuery($query);
 				$max = $db->loadResult();
