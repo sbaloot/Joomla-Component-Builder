@@ -61,7 +61,7 @@ class ComponentbuilderModelNew_view extends JModelAdmin
 	 *
 	 * @since   1.6
 	 */
-	public function getTable($type = 'admin_view', $prefix = 'ComponentbuilderTable', $config = array())
+	public function getTable($type = 'new_view', $prefix = 'ComponentbuilderTable', $config = array())
 	{
 		return JTable::getInstance($type, $prefix, $config);
 	}
@@ -75,13 +75,14 @@ class ComponentbuilderModelNew_view extends JModelAdmin
 	 *
 	 * @since   1.6
 	 */
-	public function getItem($pk = null)
+	public function getItem($pk = null)   //pk is: primary key
 	{
 		if ($item = parent::getItem($pk))
 		{
 			if (!empty($item->params))
 			{
 				// Convert the params field to an array.
+				// uses jregistry to convert xml to array.
 				$registry = new Registry;
 				$registry->loadString($item->params);
 				$item->params = $registry->toArray();

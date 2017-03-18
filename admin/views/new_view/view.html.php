@@ -193,10 +193,13 @@ class ComponentbuilderViewNew_view extends JViewLegacy
 	 *
 	 * @return void
 	 */
+	 //adds scripts and stylesheets to the document.
 	protected function setDocument()
 	{
 		$isNew = ($this->item->id < 1);
+		// the code below gets the document object. 
 		$document = JFactory::getDocument();
+		// the code below sets the title of page dunamicaly. 
 		$document->setTitle(JText::_($isNew ? 'COM_COMPONENTBUILDER_ADMIN_VIEW_NEW' : 'COM_COMPONENTBUILDER_ADMIN_VIEW_EDIT'));
 		$document->addStyleSheet(JURI::root() . "administrator/components/com_componentbuilder/assets/css/new_view.css");
 		// Add Ajax Token
