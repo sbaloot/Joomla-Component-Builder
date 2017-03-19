@@ -26,6 +26,9 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
+// what is the use?
+//it uses a namespace.
+//but there is a question: who defined the namespace below? joomla or vdm?
 use Joomla\Registry\Registry;
 
 // import Joomla modelform library
@@ -79,12 +82,22 @@ class ComponentbuilderModelNew_view extends JModelAdmin
 	{
 		if ($item = parent::getItem($pk))
 		{
-			if (!empty($item->params))
-			{
+			if (!empty($item->params))  //first see what is $item->params.
+										//must see jmodeladmin class.
+										//getItem method returns: Object on success, false on failure.
+			{							//this object is the list and the values of a record in database.
+										//so the $item->params is the name and value of Params coulumn in the table.
 				// Convert the params field to an array.
 				// uses jregistry to convert xml to array.
+				//instantiate the Registry.
 				$registry = new Registry;
+				//what do the loadString method?
+				//Load a string into the registry. 
 				$registry->loadString($item->params);
+				//what is the usage of toArray method?
+				//Transforms a namespace to an object
+				//it uses the Default namespace.
+				//but i must search further ...
 				$item->params = $registry->toArray();
 			}
 
