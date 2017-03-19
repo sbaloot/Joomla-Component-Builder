@@ -355,7 +355,7 @@ abstract class ComponentbuilderHelper
 				foreach ($helps as $nr => $help)
 				{
 					if ($help->target == 1)
-					{					// what is json_decode?
+					{
 						$targetgroups = json_decode($help->groups, true);
 						if (!array_intersect($targetgroups, $groups))
 						{
