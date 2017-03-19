@@ -39,6 +39,7 @@ abstract class ComponentbuilderHelper
 
 	/*
 	 * Autoloader
+	 edit by: ehsan abbasi.
 	 */
 	public static function autoLoader($type = 'compiler')
 	{

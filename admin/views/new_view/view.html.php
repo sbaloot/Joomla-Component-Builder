@@ -28,7 +28,7 @@ defined('_JEXEC') or die('Restricted access');
 
 // import Joomla view library
 jimport('joomla.application.component.view');
-
+// edit by ehsan abbasi.
 /**
  * Admin_view View class
  */
