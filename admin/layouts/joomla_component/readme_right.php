@@ -10,8 +10,13 @@
                                                         |_| 				
 /-------------------------------------------------------------------------------------------------------------------------------/
 
+<<<<<<< HEAD
 	@version		2.3.5
 	@build			24th February, 2017
+=======
+	@version		2.3.7
+	@build			18th March, 2017
+>>>>>>> refs/remotes/vdm-io/master
 	@created		30th April, 2015
 	@package		Component Builder
 	@subpackage		readme_right.php

@@ -22,7 +22,7 @@
 	Builds Complex Joomla Components 
                                                              
 /-----------------------------------------------------------------------------------------------------------------------------*/
-
+// edit by ehsan abbasi.
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 
