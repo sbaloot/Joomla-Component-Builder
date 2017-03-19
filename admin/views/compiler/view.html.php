@@ -24,17 +24,26 @@
 /-----------------------------------------------------------------------------------------------------------------------------*/
 
 // No direct access to this file
-defined('_JEXEC') or die('Restricted access');
+//defined('_JEXEC') or die('Restricted access');
 
 // import Joomla view library
 jimport('joomla.application.component.view');
 
 /**
  * Componentbuilder View class for the Compiler
+ * edit by ehsan abbasi.
+ * is expriment.
  */
 class ComponentbuilderViewCompiler extends JViewLegacy
 {
 	// Overwriting JView display method
+	/**
+	 * @param null $tpl
+	 *
+	 * @return bool
+	 *
+	 * @since version
+	 */
 	function display($tpl = null)
 	{
                 // get component params
