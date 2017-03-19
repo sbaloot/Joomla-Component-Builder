@@ -112,6 +112,11 @@ class ComponentbuilderModelNew_view extends JModelAdmin
 			if (!empty($item->php_ajaxmethod))
 			{
 				// base64 Decode php_ajaxmethod.
+				//EA: what is the usage of base64_decode method?
+				//base64_encode:
+				//This encoding is designed to make binary data survive transport
+				// through transport layers that are not 8-bit clean, such as mail bodies.
+				//Base64-encoded data takes about 33% more space than the original data.
 				$item->php_ajaxmethod = base64_decode($item->php_ajaxmethod);
 			}
 
