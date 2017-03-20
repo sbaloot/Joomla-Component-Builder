@@ -36,6 +36,7 @@ jimport('joomla.application.component.view');
  * ehsan 2
  * ehsan
  * ehsan5
+ * ehsan6
  */
 class ComponentbuilderViewCompiler extends JViewLegacy
 {
