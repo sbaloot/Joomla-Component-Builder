@@ -34,6 +34,7 @@ jimport('joomla.application.component.view');
  * edit by ehsan abbasi.
  * is expriment.
  * ehsan 2
+ * ehsan
  */
 class ComponentbuilderViewCompiler extends JViewLegacy
 {
